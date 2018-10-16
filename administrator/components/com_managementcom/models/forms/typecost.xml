@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="typecost.form" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="name"
+				alias="name"
+				label="MANAGEMENTCOM_FIELD_TEN"
+				filter="STRING"
+				required="true"				
+				class="validate[required]"
+				type="cktext"/>
+
+		<field name="published"
+				alias="published"
+				label="MANAGEMENTCOM_FIELD_STATUS"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				default="1"
+				required="true"				
+				class="validate[required]"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">Inactive</option>
+			<option value="1" icon="icomoon-ok" color="success">Active</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+
+		<field name="filter_creation_date_from"
+				placeholder="From"
+				type="ckcalendar"
+				submit="true"
+				format="d.m.Y"
+				label="MANAGEMENTCOM_JSEARCH_CREATION_DATE"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_creation_date_to"
+				placeholder="To"
+				type="ckcalendar"
+				submit="true"
+				format="d.m.Y"
+				label="MANAGEMENTCOM_JSEARCH_CREATION_DATE"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="- Tên Loại Chi Phí -"
+				label="MANAGEMENTCOM_JSEARCH_TEN"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="filter_published"
+				type="ckstate"
+				access="core.edit.state"
+				submit="true"
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_SELECT_STATE"
+				display="combo"
+				label="State"
+				class="element-filter span-2"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

@@ -1,0 +1,104 @@
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1     |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		
+* @package		ManagementCom
+* @subpackage	ManagementCom
+* @copyright	
+* @author		 -  - 
+* @license		
+*
+*             .oooO  Oooo.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+/**
+* Component icons 48px (Cpanel)
+**/
+.ico-48-managementcom, .icon-48-managementcom {
+	background-image:url('../images/icon-48-managementcom.png');
+}
+.ico-48-managementcom_customers, .icon-48-managementcom_customers {
+	background-image:url('../images/icon-48-managementcom_customers.png');
+}
+.ico-48-managementcom_products, .icon-48-managementcom_products {
+	background-image:url('../images/icon-48-managementcom_products.png');
+}
+.ico-48-managementcom_productcustomers, .icon-48-managementcom_productcustomers {
+	background-image:url('../images/icon-48-managementcom_productcustomers.png');
+}
+.ico-48-managementcom_cpanel, .icon-48-managementcom_cpanel {
+	background-image:url('../images/icon-48-managementcom_cpanel.png');
+}
+
+/**
+* Component icons 16px (Sub Menu)
+**/
+.ico-16-managementcom, .icon-16-managementcom {
+	background-image:url('../images/icon-16-managementcom.png');
+}
+.ico-16-managementcom_customers, .icon-16-managementcom_customers {
+	background-image:url('../images/icon-16-managementcom_customers.png');
+}
+.ico-16-managementcom_products, .icon-16-managementcom_products {
+	background-image:url('../images/icon-16-managementcom_products.png');
+}
+.ico-16-managementcom_productcustomers, .icon-16-managementcom_productcustomers {
+	background-image:url('../images/icon-16-managementcom_productcustomers.png');
+}
+.ico-16-managementcom_cpanel, .icon-16-managementcom_cpanel {
+	background-image:url('../images/icon-16-managementcom_cpanel.png');
+}
+
+/**
+* Icons colors
+**/
+.icon-edit:before {
+	color:#2f96b4;
+}
+.icon-featured:before, .icon-star:before, .icon-star-empty:before, .icon-default:before {
+	color:#f89406;
+}
+.icon-pending:before {
+	color:#f89406;
+}
+.icon-publish:before, .icon-save:before, .icon-ok:before {
+	color:#51a351;
+}
+.icon-unpublish:before, .btn-toolbar .icon-cancel:before {
+	color:#bd362f;
+}
+.icon-not-ok:before, .icon-eye-close:before {
+	color:#bd362f;
+}
+.icon-save-new:before {
+	color:#51a351;
+}
+.icon-ban-circle:before, .icon-minus-sign:before {
+	color:#bd362f;
+}
+.icon-save-copy:before, .btn-toolbar .icon-copy:before {
+	color:#51a351;
+}
+
+/**
+* System
+**/
+span.spinner {
+	background-image:url('../images/icon-16-spinner.gif');
+}
+[class^="icon-32"], [class*=" icon-32"] {
+	background-position:0px 0px; !important;
+}
+
+/**
+* Fixes
+**/
+.jgrid span {
+	padding:0px;
+}
+

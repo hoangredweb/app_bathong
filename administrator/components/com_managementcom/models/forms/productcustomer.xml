@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="productcustomer.form" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="customer_id"
+				alias="_customer_id_nick_name"
+				label="MANAGEMENTCOM_FIELD_KHACH_HANG"
+				filter="INT"
+				listKey="id"
+				labelKey="nick_name"
+				type="ckcombo"
+				nullLabel="MANAGEMENTCOM_JSEARCH_SELECT_KHACH_HANG"
+				required="true"
+				class="validate[required]"/>
+
+		<field name="total_weight"
+				alias="total_weight"
+				label="MANAGEMENTCOM_FIELD_S_LUNG"
+				filter="STRING"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+		
+		<field name="total_price"
+				alias="total_price"
+				label="Giá"
+				filter="STRING"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+
+		<!--  <field name="weight"
+				alias="weight"
+				label="MANAGEMENTCOM_FIELD_TRNG_LUNG"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="ckradio"
+				nullLabel="MANAGEMENTCOM_JSEARCH_SELECT_TRNG_LUNG"
+				enum="productcustomers_weight"
+				required="true"
+				class="validate[required]"/>  -->
+				
+		<field 
+			name="weight" 
+			alias="weight" 
+			type="radio" 
+			default="5" 
+			label="MANAGEMENTCOM_FIELD_TRNG_LUNG" 
+			description="" 
+			class="btn-group" 
+			required="true">
+			<option value="1">100G</option>
+			<option value="2">200G</option>
+			<option value="3">250G</option>
+			<option value="4">300G</option>
+			<option value="5">500G</option>
+		</field>
+
+		<field name="product_id"
+				alias="_product_id_product_name"
+				label="MANAGEMENTCOM_FIELD_SN_PHM"
+				listKey="value"
+				viewType="both"	
+				type="ckradio"
+				default='1'
+				required="true"
+				class="validate[required]"/>
+
+		
+		
+		<!-- <field name="taste"
+				alias="taste"
+				label="MANAGEMENTCOM_FIELD_V"
+				filter="STRING"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				nullLabel="MANAGEMENTCOM_JSEARCH_SELECT_V"
+				enum="productcustomers_taste"/> -->
+				
+			<field name="taste" type="radio" default="0" label="MANAGEMENTCOM_FIELD_V" description="" class="btn-group">
+				<option value="0">Bình Thường</option>
+				<option value="1">Không Cay</option>
+				<option value="2">Ít Cay</option>
+				<option value="3">Cay Nhiều</option>
+				<option value="4">Siêu Cay</option>
+				<option value="5">Siêu Sốt</option>
+			</field>
+
+		<field name="vacuum"
+				alias="vacuum"
+				label="MANAGEMENTCOM_FIELD_HUT_CHAN_KHONG"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				default="0"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">MANAGEMENTCOM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">MANAGEMENTCOM_FIELDS_BOOL_YES</option>
+		</field>
+
+		<field name="payment_status"
+				alias="payment_status"
+				label="MANAGEMENTCOM_FIELD_PAYMENT_STATUS"
+				filter="BOOL"
+				listKey="value"
+				type="ckradio"
+				default="0"
+				viewType="both">
+			<option value="0" icon="icomoon-cancel" color="danger">MANAGEMENTCOM_ENUM_PRODUCTCUSTOMERS_PAYMENT_STATUS_1</option>
+			<option value="1" icon="icomoon-ok" color="success">MANAGEMENTCOM_ENUM_PRODUCTCUSTOMERS_PAYMENT_STATUS_2</option>
+		</field>
+		
+		<field name="note"
+				alias="note"
+				label="MANAGEMENTCOM_FIELD_GHI_CHU"
+				filter="raw"
+				rows="1"
+				cols="12"
+				type="cktextarea"/>
+
+		<field name="input_date"
+				alias="input_date"
+				label="MANAGEMENTCOM_FIELD_NGAY_NHP"
+				filter="STRING"
+				type="ckcalendar"
+				format="d.m.Y"
+				required="true"
+				default="NOW"
+				class="validate[required]"/>
+
+		<field name="published"
+				alias="published"
+				label="MANAGEMENTCOM_FIELD_STATUS"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				default="1"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">Inactive</option>
+			<option value="1" icon="icon-ok" color="success">Active</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="filter_customer_id"
+				listKey="id"
+				labelKey="nick_name"
+				type="ckcombo"
+				
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_KHACH_HANG"
+				class="span-2 element-filter"
+				label="MANAGEMENTCOM_JSEARCH_KHACH_HANG"
+				ui="chosen"/>
+
+		<field name="filter_product_id"
+				listKey="id"
+				labelKey="product_name"
+				type="ckcombo"
+				
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_SN_PHM"
+				class="span-2 element-filter"
+				label="MANAGEMENTCOM_JSEARCH_SN_PHM"
+				ui="chosen"/>
+		
+		<field name="filter_current_date"
+				placeholder="Ngày Nhập"
+				type="ckcalendar"
+				
+				format="d.m.Y"
+				label="MANAGEMENTCOM_JSEARCH_NGAY_NHP"
+				class="element-filter input-small"
+				ui="chosen"/>
+		
+		<field name="filter_input_date_from"
+				placeholder="MANAGEMENTCOM_FILTER_INPUT_DATE_FROM"
+				type="ckcalendar"
+				
+				format="d.m.Y"
+				label="MANAGEMENTCOM_JSEARCH_NGAY_NHP"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_input_date_to"
+				placeholder="MANAGEMENTCOM_FILTER_INPUT_DATE_TO"
+				type="ckcalendar"
+				
+				format="d.m.Y"
+				label="MANAGEMENTCOM_JSEARCH_NGAY_NHP"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_taste"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_V"
+				enum="productcustomers_taste"
+				label="MANAGEMENTCOM_JSEARCH_V"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_payment_status"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_PAYMENT_STATUS"
+				enum="productcustomers_taste"
+				label="MANAGEMENTCOM_JSEARCH_PAYMENT_STATUS"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="search_search"
+				listKey="id"
+				labelKey="nick_name"
+				type="cksearch"
+				placeholder="MANAGEMENTCOM_FILTER_NULL_KHACH_HANG_SN_PHM_V_NGAY_NHP_GHI_CHU_S_LUNG"
+				label="MANAGEMENTCOM_JSEARCH_KHACH_HANG_SN_PHM_V_NGAY_NHP_GHI_CHU_S_LUNG"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="filter_vacuum"
+				listKey="value"
+				type="ckcombo"
+				
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_HUT_CHAN_KHONG"
+				class="span-2 element-filter"
+				label="MANAGEMENTCOM_JSEARCH_HUT_CHAN_KHONG"
+				ui="chosen">
+			<option value="0" icon="icomoon-cancel" color="danger">MANAGEMENTCOM_FIELDS_BOOL_NO</option>
+			<option value="1" icon="icomoon-ok" color="success">MANAGEMENTCOM_FIELDS_BOOL_YES</option>
+		</field>
+		
+		<field name="filter_profit"
+				listKey="value"
+				type="ckcombo"
+				
+				nullLabel="- Chọn Cách Lọc -"
+				class="span-2 element-filter"
+				label="Lọc"
+				ui="chosen">
+			<option value="1" >Ngày</option>
+			<option value="2" >Tháng</option>
+			<option value="3" >Năm</option>
+			<option value="3" >Quý</option>
+		</field>
+
+		<field name="filter_weight"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_TRNG_LUNG"
+				enum="productcustomers_weight"
+				label="MANAGEMENTCOM_JSEARCH_TRNG_LUNG"
+				class="element-filter"
+				ui="chosen"/>
+				
+		<field name="filter_typefilter"
+				listKey="value"
+				type="ckcombo"
+				
+				nullLabel="- Chọn Cách Lọc -"
+				class="span-2 element-filter"
+				label="Lọc"
+				ui="chosen">
+			<option value="1" >Ngày</option>
+			<option value="2" >Tháng</option>
+			<option value="3" >Năm</option>
+			<option value="4" >Quý</option>
+		</field>
+                
+       <field name="filter_star_type_date"
+				type="ckcalendar"
+				
+				format="d.m.Y"
+				placeholder="From"
+				label="MANAGEMENTCOM_JSEARCH_NGAY_NHP"
+				class="element-filter input-small"
+				ui="chosen"/>
+                
+        <field name="filter_end_type_date"
+				type="ckcalendar"
+				
+				format="d.m.Y"
+				placeholder="To"
+				label="MANAGEMENTCOM_JSEARCH_NGAY_NHP"
+				class="element-filter input-small"
+				ui="chosen"/>
+				
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>

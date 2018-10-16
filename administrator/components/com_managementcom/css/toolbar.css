@@ -1,0 +1,145 @@
+/**                               ______________________________________________
+*                          o O   |                                              |
+*                 (((((  o      <    Generated with Cook Self Service  V3.1     |
+*                ( o o )         |______________________________________________|
+* --------oOOO-----(_)-----OOOo---------------------------------- www.j-cook.pro --- +
+* @version		
+* @package		ManagementCom
+* @subpackage	ManagementCom
+* @copyright	
+* @author		 -  - 
+* @license		
+*
+*             .oooO  Oooo.
+*             (   )  (   )
+* -------------\ (----) /----------------------------------------------------------- +
+*               \_)  (_/
+*/
+
+/**
+* Component icons 48px (Cpanel)
+**/
+.ico-48-managementcom, .icon-48-managementcom {
+	background-image:url('../images/icon-48-managementcom.png');
+}
+.ico-48-managementcom_city, .icon-48-managementcom_city {
+	background-image:url('../images/icon-48-managementcom_city.png');
+}
+.ico-48-managementcom_cities, .icon-48-managementcom_cities {
+	background-image:url('../images/icon-48-managementcom_cities.png');
+}
+
+.ico-48-managementcom_country, .icon-48-managementcom_country {
+	background-image:url('../images/icon-48-managementcom_country.png');
+}
+.ico-48-managementcom_countries, .icon-48-managementcom_countries {
+	background-image:url('../images/icon-48-managementcom_countries.png');
+}
+
+.ico-48-managementcom_debt, .icon-48-managementcom_debt {
+	background-image:url('../images/icon-48-managementcom_debt.png');
+}
+.ico-48-managementcom_debts, .icon-48-managementcom_debts {
+	background-image:url('../images/icon-48-managementcom_debts.png');
+}
+.ico-48-managementcom_debts_statis, .icon-48-managementcom_debts_statis {
+	background-image:url('../images/icon-48-managementcom_debts_statis.png');
+}
+
+.ico-48-managementcom_customer, .icon-48-managementcom_customer {
+	background-image:url('../images/icon-48-managementcom_customer.png');
+}
+.ico-48-managementcom_customers, .icon-48-managementcom_customers {
+	background-image:url('../images/icon-48-managementcom_customers.png');
+}
+.ico-48-managementcom_pricelist, .icon-48-managementcom_pricelist {
+	background-image:url('../images/icon-48-managementcom_pricelist.png');
+}
+.ico-48-managementcom_pricelists, .icon-48-managementcom_pricelists {
+	background-image:url('../images/icon-48-managementcom_pricelists.png');
+}
+.ico-48-managementcom_products, .icon-48-managementcom_products {
+	background-image:url('../images/icon-48-managementcom_products.png');
+}
+.ico-48-managementcom_product, .icon-48-managementcom_product {
+	background-image:url('../images/icon-48-managementcom_product.png');
+}
+.ico-48-managementcom_productcustomer, .icon-48-managementcom_productcustomer {
+	background-image:url('../images/icon-48-managementcom_productcustomer.png');
+}
+.ico-48-managementcom_productcustomers, .icon-48-managementcom_productcustomers {
+	background-image:url('../images/icon-48-managementcom_productcustomers.png');
+}
+
+.ico-48-managementcom_typecost, .icon-48-managementcom_typecost {
+	background-image:url('../images/icon-48-managementcom_typecost.png');
+}
+.ico-48-managementcom_typecosts, .icon-48-managementcom_typecosts {
+	background-image:url('../images/icon-48-managementcom_typecosts.png');
+}
+
+.ico-48-managementcom_cost, .icon-48-managementcom_cost {
+	background-image:url('../images/icon-48-managementcom_cost.png');
+}
+.ico-48-managementcom_costs, .icon-48-managementcom_costs {
+	background-image:url('../images/icon-48-managementcom_costs.png');
+}
+
+.ico-48-managementcom_productcustomers_statis, .icon-48-managementcom_productcustomers_statis {
+	background-image:url('../images/icon-48-managementcom_productcustomers_statis.png');
+}
+.ico-48-managementcom_productcustomers_chart, .icon-48-managementcom_productcustomers_chart {
+	background-image:url('../images/icon-48-managementcom_productcustomers_chart.png');
+}
+.ico-48-managementcom_productcustomers_chartcolumn, .icon-48-managementcom_productcustomers_chartcolumn {
+	background-image:url('../images/icon-48-managementcom_productcustomers_chartcolumn.png');
+}
+.ico-48-managementcom_productcustomers_profit, .icon-48-managementcom_productcustomers_profit {
+	background-image:url('../images/icon-48-managementcom_productcustomers_profit.png');
+}
+.ico-48-managementcom_cpanel, .icon-48-managementcom_cpanel {
+	background-image:url('../images/icon-48-managementcom_cpanel.png');
+}
+
+/**
+* Component icons 16px (Sub Menu)
+**/
+.ico-16-managementcom, .icon-16-managementcom {
+	background-image:url('../images/icon-16-managementcom.png');
+}
+.ico-16-managementcom_customers, .icon-16-managementcom_customers {
+	background-image:url('../images/icon-16-managementcom_customers.png');
+}
+.ico-16-managementcom_products, .icon-16-managementcom_products {
+	background-image:url('../images/icon-16-managementcom_products.png');
+}
+.ico-16-managementcom_productcustomers, .icon-16-managementcom_productcustomers {
+	background-image:url('../images/icon-16-managementcom_productcustomers.png');
+}
+.ico-16-managementcom_cpanel, .icon-16-managementcom_cpanel {
+	background-image:url('../images/icon-16-managementcom_cpanel.png');
+}
+
+/**
+* System
+**/
+span.spinner {
+	background-image:url('../images/icon-16-spinner.gif');
+}
+[class^="icon-32"], [class*=" icon-32"] {
+	background-position:0px 0px; !important;
+}
+
+/**
+* Fixes
+**/
+.jgrid span {
+	padding:0px;
+}
+.toolbar{
+	margin-top: 20px;
+	/* float: right; */
+}
+.btn-small{
+	padding: 5px 10px!important;
+}

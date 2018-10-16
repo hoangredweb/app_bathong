@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<form>
+
+	<fieldset name="customer.form" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="nick_name"
+				alias="nick_name"
+				label="MANAGEMENTCOM_FIELD_NICKNAME"
+				filter="STRING"
+				type="cktext"
+				required="true"
+				class="validate[required]"/>
+				
+		<field name="pricelist_id"
+				alias="_pricelist_id_name"
+				label="Bảng Giá"
+				filter="INT"
+				listKey="id"
+				labelKey="name"
+				type="ckcombo"
+				nullLabel="- Chọn Bảng Giá -"
+				required="true"
+				class="validate[required]"/> 
+
+		<field name="last_name"
+				alias="last_name"
+				label="MANAGEMENTCOM_FIELD_H"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="first_name"
+				alias="first_name"
+				label="MANAGEMENTCOM_FIELD_TEN"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="address"
+				alias="address"
+				label="MANAGEMENTCOM_FIELD_DA_CH"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="phone"
+				alias="phone"
+				label="MANAGEMENTCOM_FIELD_DIN_THOI"
+				filter="STRING"
+				type="cktext"
+				validate="numeric"
+				class=""/>
+
+		<field name="email"
+				alias="email"
+				label="MANAGEMENTCOM_FIELD_EMAIL"
+				filter="STRING"
+				type="cktext"/>
+
+		<field name="note"
+				alias="note"
+				label="MANAGEMENTCOM_FIELD_GHI_CHU"
+				filter="raw"
+				rows="5"
+				cols="12"
+				type="cktextarea"/>
+
+		<field name="country_id"
+				alias="_country_id_title"
+				label="MANAGEMENTCOM_FIELD_COUNTRY"
+				filter="INT"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				default='1'
+				nullLabel="MANAGEMENTCOM_JSEARCH_SELECT_COUNTRY"/>
+
+		<field name="city_id"
+				alias="_city_id_title"
+				label="MANAGEMENTCOM_FIELD_CITY"
+				filter="INT"
+				listKey="id"
+				labelKey="title"
+				default='5'
+				type="ckcombo"
+				nullLabel="MANAGEMENTCOM_JSEARCH_SELECT_CITY"/>
+
+		<field 
+			name="type_customer_id" 
+			type="radio" default="1" 
+			label="MANAGEMENTCOM_FIELD_TYPE_CUSTOMER" 
+			description="" class="btn-group">
+				<option value="1">Khách Sỉ</option>
+				<option value="2">Khách Lẻ</option>
+		</field>
+
+
+		<field name="published"
+				alias="published"
+				label="MANAGEMENTCOM_FIELD_STATUS"
+				filter="INT"
+				access="core.edit.state"
+				listKey="value"
+				default="1"
+				type="ckstate">
+			<option value="0" icon="icomoon-cancel" color="danger">Inactive</option>
+			<option value="1" icon="icomoon-ok" color="success">Active</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="default.filters" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="filter_country_id"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_COUNTRY_TITLE"
+				class="span-2 element-filter"
+				label="MANAGEMENTCOM_JSEARCH_COUNTRY_TITLE"
+				ui="chosen"/>
+
+		<field name="filter_city_id"
+				listKey="id"
+				labelKey="title"
+				type="ckcombo"
+				submit="true"
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_CITY_TITLE"
+				class="span-2 element-filter"
+				label="MANAGEMENTCOM_JSEARCH_CITY_TITLE"
+				ui="chosen"/>
+
+		<field name="filter_type_customer_id"
+				listKey="value"
+				labelKey="text"
+				type="enum"
+				submit="true"
+				nullLabel="MANAGEMENTCOM_FILTER_NULL_TYPE_CUSTOMER_ID"
+				enum="customers_type_customer_id"
+				label="MANAGEMENTCOM_JSEARCH_TYPE_CUSTOMER_ID"
+				class="element-filter"
+				ui="chosen"/>
+
+		<field name="filter_creation_date_from"
+				placeholder="MANAGEMENTCOM_FILTER_CREATION_DATE_CREATED_BY_FROM"
+				type="ckcalendar"
+				submit="true"
+				format="Y-m-d H:i:s"
+				label="MANAGEMENTCOM_JSEARCH_CREATED_BY"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="filter_creation_date_to"
+				placeholder="MANAGEMENTCOM_FILTER_CREATION_DATE_CREATED_BY_TO"
+				type="ckcalendar"
+				submit="true"
+				format="Y-m-d H:i:s"
+				label="MANAGEMENTCOM_JSEARCH_CREATED_BY"
+				class="element-filter input-small"
+				ui="chosen"/>
+
+		<field name="search_search"
+				type="cksearch"
+				placeholder="MANAGEMENTCOM_FILTER_NULL_NICKNAME_H_TEN_DA_CH_EMAIL_GHI_CHU"
+				label="MANAGEMENTCOM_JSEARCH_NICKNAME_H_TEN_DA_CH_EMAIL_GHI_CHU"
+				class="element-filter element-search search-query"
+				ui="chosen"/>
+
+		<field name="sortTable"
+				type="cksort"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JGLOBAL_SORT_BY"
+				class="span-2 element-filter"
+				label="Sort by"
+				ui="chosen"/>
+
+		<field name="directionTable"
+				type="ckdirection"
+				responsive="hidden-phone"
+				submit="true"
+				nullLabel="JFIELD_ORDERING_DESC"
+				class="span-2 element-filter"
+				label="Direction"
+				ui="chosen"/>
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+
+	<fieldset name="modal.filters" addfieldpath="/administrator/components/com_managementcom/models/fields">
+
+		<field name="limit"
+				type="cklimit"
+				submit="true"
+				class="span-2 element-filter"
+				label="Limit"
+				ui="chosen"/>
+	</fieldset>
+</form>
